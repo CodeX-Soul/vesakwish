@@ -1,0 +1,197 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: radial-gradient(#000814, #001d3d);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding-top: 50px;
+    overflow-x: hidden;
+  }
+  
+  /* Thorana Structure */
+  .thorana {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    color: #FFD60A;
+    margin-bottom: 30px;
+  }
+  
+  /* Lantern */
+  .lantern {
+    margin: 40px auto;
+    width: 100px;
+    position: relative;
+    animation: float 4s ease-in-out infinite;
+  }
+  
+  .lantern .body {
+    width: 100px;
+    height: 100px;
+    background: #FFC300;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #FFD60A;
+  }
+  
+  .lantern .tail {
+    width: 10px;
+    height: 50px;
+    background: #FFD60A;
+    margin: auto;
+    margin-top: -10px;
+  }
+  
+  /* Blinking Lights */
+  .light-strip {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .light {
+    width: 20px;
+    height: 20px;
+    background-color: #FFD60A;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #FFD60A;
+    transition: background 0.3s ease;
+  }
+  
+  /* Quote/Message */
+  .message {
+    font-size: 1.2rem;
+    margin-top: 40px;
+    color: #FFC300;
+  }
+  
+  /* Animations */
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+
+  .buddhist-img {
+    width: 250px;
+    max-width: 90%;
+    margin: 20px auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #FFD60A;
+  }
+  
+  /* Audio player styling */
+  .audio-player {
+    margin-top: 30px;
+    background: transparent;
+    border: none;
+  }
+
+  /* Background Lantern Animation */
+.vesak-lanterns {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0; /* behind everything */
+    overflow: hidden;
+  }
+  
+  .lantern-float {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: radial-gradient(circle, #FFD60A 40%, #FFA500 100%);
+    border-radius: 4px;
+    box-shadow: 0 0 10px #FFC300, 0 0 20px #FFD60A;
+    opacity: 0.8;
+    animation: floatLantern linear infinite;
+  }
+  
+  @keyframes floatLantern {
+    from {
+      transform: translateY(100vh) scale(1);
+      opacity: 0.8;
+    }
+    to {
+      transform: translateY(-10vh) scale(0.5);
+      opacity: 0;
+    }
+  }
+  
+  
+
+  /* Responsive Enhancements */
+@media (max-width: 768px) {
+    .title {
+      font-size: 2rem;
+    }
+  
+    .light-strip {
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+  
+    .light {
+      width: 16px;
+      height: 16px;
+    }
+  
+    .lantern {
+      width: 80px;
+    }
+  
+    .lantern .body {
+      width: 80px;
+      height: 80px;
+    }
+  
+    .lantern .tail {
+      height: 40px;
+    }
+  
+    .buddhist-img {
+      width: 200px;
+    }
+  
+    .message {
+      font-size: 1rem;
+      padding: 0 10px;
+    }
+  
+    .audio-player {
+      width: 90%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .title {
+      font-size: 1.6rem;
+    }
+  
+    .light-strip {
+      gap: 10px;
+    }
+  
+    .buddhist-img {
+      width: 150px;
+    }
+  
+    .message {
+      font-size: 0.95rem;
+    }
+  }
+  
